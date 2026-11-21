@@ -53,6 +53,7 @@ add_subdirectory(thirdparty/safeSave)			#saving data, designed for gamedev. It a
 add_subdirectory(thirdparty/profilerLib)		#profiling, just a simpe library for measuring elapsed time
 add_subdirectory(thirdparty/gl2d)				#2D rendering library
 add_subdirectory(thirdparty/glui)				#ui library, usefull for making game menus
+add_subdirectory(thirdparty/assimp)             #assimp for loading 3D models, might come in handy
 
 
 # MY_SOURCES is defined to be a list of all the source files for my game 
@@ -83,7 +84,7 @@ else()
 
 endif()
 
-target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES} )
+target_sources("${CMAKE_PROJECT_NAME}" PRIVATE ${MY_SOURCES}  "src/main.cpp")
 
 
 if(MSVC) # If using the VS compiler...
@@ -114,4 +115,4 @@ target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURC
 
 
 target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glm glfw 
-	glad stb_image stb_truetype gl2d raudio imgui safeSave profilerLib glui)
+	glad stb_image stb_truetype gl2d raudio imgui safeSave profilerLib glui assimp)

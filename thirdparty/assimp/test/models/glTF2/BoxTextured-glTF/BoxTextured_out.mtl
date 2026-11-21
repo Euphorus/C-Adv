@@ -1,0 +1,16 @@
+# File produced by Open Asset Import Library (https://www.assimp.org)
+# (assimp v6.0.2581385110)
+
+newmtl Texture
+Kd 1 1 1
+Ke 0 0 0
+d 1
+illum 1
+map_Kd CesiumLogoFlat.png
+
+newmtl DefaultMaterial
+Kd 1 1 1
+Ke 0 0 0
+d 1
+illum 1
+
